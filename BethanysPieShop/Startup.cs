@@ -28,9 +28,12 @@ namespace BethanysPieShop
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            /*--- для отображения изменения сайта runtime */
+            services.AddRazorPages().AddRazorRuntimeCompilation();
+
             services.AddDbContext<AppDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-
+            //добавления Ідентеті
             services.AddDefaultIdentity<IdentityUser>().AddEntityFrameworkStores<AppDbContext>();
 
 
@@ -43,7 +46,8 @@ namespace BethanysPieShop
             services.AddSession();
 
             services.AddControllersWithViews();//services.AddMvc(); would also work still
-            services.AddRazorPages();
+            services.AddRazorPages();            //треба для ідентеті 
+
 
         }
 
@@ -53,6 +57,7 @@ namespace BethanysPieShop
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseBrowserLink();  /*--- для отображения изменения сайта runtime */
             }
 
             app.UseHttpsRedirection();
