@@ -57,24 +57,24 @@ footer {
 }
 
 .navbar {
-    background-image: none;
+    background-image: url('/images/pattern.png');
 }
 
 .navbar-inverse {
-    background-color: #a593c2;
+    background-color: #ffffff;
     border-color: #a593c2;
-  
 }
 
 .nav.navbar-nav.navbar-right li a {
-    color: #060606;
+    text-align: right;
+    color: black;
     font-size: 1.2em;
 }
 
 .navbar .nav > li > a {
     font-size: 1.2em;
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-    color:  white;
+    color: black;
 }
 
 .carousel .item {

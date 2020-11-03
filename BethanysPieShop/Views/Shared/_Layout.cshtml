@@ -2,13 +2,31 @@
 
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>@ViewBag.Title</title>
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro">
+    <meta charset="utf-8">
+    <title>Bellaria - a Delicious Cakes and Bakery HTML Template | Home Cake</title>
+    <!-- Stylesheets -->
+    <link href="css2/bootstrap.css" rel="stylesheet">
+    <link href="plugins/revolution/css/settings.css" rel="stylesheet" type="text/css"><!-- REVOLUTION SETTINGS STYLES -->
+    <link href="plugins/revolution/css/layers.css" rel="stylesheet" type="text/css"><!-- REVOLUTION LAYERS STYLES -->
+    <link href="plugins/revolution/css/navigation.css" rel="stylesheet" type="text/css"><!-- REVOLUTION NAVIGATION STYLES -->
+
+    <link href="css2/style.css" rel="stylesheet">
+    <link href="css2/responsive.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+
+    <!-- Responsive -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+
+    @*основа1*@
+    <!--<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro">
     <link href="~/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
     <script src="~/lib/jquery/jquery.js"></script>
     <script src="~/lib/bootstrap/js/bootstrap.js"></script>
-    <link href="~/Content/site.css" rel="stylesheet" />
+    <link href="~/Content/site.css" rel="stylesheet" />-->
 </head>
 <body>
 
@@ -32,9 +50,9 @@
                                     <a asp-area="" asp-controller="Home" asp-action="Index">Головна</a>
 
                                 </li>
-                                <li class="dropdown">
+                                
                                     @await Component.InvokeAsync("CategoryMenu")
-                                </li>
+                             
                                 <li class="dropdown">
                                 <li><a asp-controller="Contact" asp-action="Index">Звязок</a></li>
 
@@ -42,90 +60,160 @@
                             </ul>
 
                             <ul class="navigation menu-right clearfix">
-
-
-                      
-
                             </ul>
                             <partial name="_LoginPartial" />
-
                         </div>
                     </nav>
                     <!-- Main Menu End-->
+                
+
+                <div class="outer-box clearfix">
+                    <!-- Shoppping Car -->  @*--- то шо ся находить у корзині*@
+                    <div class="cart-btn">
+
+                    </div>
+
+                    <div class="cart-btn">
+                        <a href="https://localhost:44358/ShoppingCart">
+                            @await Component.InvokeAsync("ShoppingCartSummary")
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- Sticky Header  -->    @*коли листаш у низ та видко logo*@
+                <div class="sticky-header">
+                    <div class="auto-container clearfix">
+                        <!--Logo-->
+                        <div class="logo">
+                            <a href="#" title="Sticky Logo"><img src="images/logo-small.png" alt="Sticky Logo"></a>
+                        </div>
+
+
+                        <!--Nav Outer-->   @*навігація коли листаш у низ*@
+                        <div class="nav-outer">
+                            <!-- Main Menu -->
+                            <nav class="main-menu">
+                                <!--Keep This Empty / Menu will come through Javascript-->
+                            </nav><!-- Main Menu End-->
+                        </div>
                     </div>
                 </div>
+
+                    
             </div>
-                    </header>
 
+            </div>
+        </div>
 
+                <!-- End Sticky Menu -->
+                <!-- Mobile Header -->
+                <div class="mobile-header">
+                    <div class="logo"><a href="index.html"><img src="images/logo-small.png" alt="" title=""></a></div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                    <div class="container">
-
-                        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-                            <div class="container">
-                                <div class="navbar-header">
-                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                                        <span class="sr-only">Toggle navigation</span>
-                                        <span class="icon-bar"></span>
-                                        <span class="icon-bar"></span>
-                                        <span class="icon-bar"></span>
-                                    </button>
-                                </div>
-                                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                                    <ul class="nav navbar-nav">
-                                        <li><a asp-controller="Home" asp-action="Index">Home</a></li>
-                                        @await Component.InvokeAsync("CategoryMenu")
-                                        <li><a asp-controller="Contact" asp-action="Index">Contact</a></li>
-                                        @await Component.InvokeAsync("ShoppingCartSummary")
-                                        <partial name="_LoginPartial" />
-                                    </ul>
-                                </div>
-                            </div>
-                        </nav>
-
-
-
-
-                        <div class="row">
-                            <div class="col-md-3">
-                                <p class="lead">
-                                    <img class="img-responsive" alt="Bethany's Pie Shop'" src="~/Images/bethanylogo.png" />
-                                </p>
-                            </div>
-                            <div class="col-md-9">
-                                @RenderBody()
-                            </div>
-                        </div>
-                        @RenderSection("Scripts", required: false)
+                    <!--Nav Box-->
+                    <div class="nav-outer clearfix">
+                        <!--Keep This Empty / Menu will come through Javascript-->
                     </div>
+                </div>
+
+                <!-- Mobile Menu  -->
+                <div class="mobile-menu">
+                    <nav class="menu-box">
+                        <div class="nav-logo"><a href="index.html"><img src="images/logo-small.png" alt="" title=""></a></div>
+                        <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
+                    </nav>
+                </div><!-- End Mobile Menu -->
+
+    </header>
+
+    @*<div class="container">  --- стара навігація
+
+            <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                            @await Component.InvokeAsync("CategoryMenu")
+                            <li><a asp-controller="Contact" asp-action="Index">Contact</a></li>
+                            @await Component.InvokeAsync("ShoppingCartSummary")
+                            <partial name="_LoginPartial" />
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>*@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @RenderBody()
+
+
+
+
+    @RenderSection("Scripts", required: false)
+    <script src="js/jquery.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!--Revolution Slider-->
+    <script src="plugins/revolution/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="plugins/revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.video.min.js"></script>
+    <script src="js/main-slider-script.js"></script>
+    <!--Revolution Slider-->
+    <script src="js/jquery.fancybox.js"></script>
+    <script src="js/owl.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/appear.js"></script>
+    <script src="js/script.js"></script>
+
 </body>
 </html>
