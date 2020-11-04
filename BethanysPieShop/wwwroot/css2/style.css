@@ -91,7 +91,7 @@ Version: 1.0.0
 	padding:0px;
 	border:none;
 	outline:none;
-	font-size: 100%;
+	font-size: 105%;
 }
 
 /*** 
@@ -120,13 +120,13 @@ a{
 	color:#5fcac7;
 }
 
-a:hover,
-a:focus,
-a:visited{
-	text-decoration:none;
-	outline:none;
-	color:#5fcac7;
-}
+	a:hover,
+	a:focus,
+	a:visited {
+		text-decoration: none;
+		outline: none;
+		color: #000000;
+	}
 
 h1,h2,h3,h4,h5,h6 {
 	position:relative;
@@ -192,7 +192,7 @@ p,.text{
 ul,li{
 	list-style:none;
 	padding:0px;
-	margin:0px;	
+	margin:4px;	
 }
 
 .fancybox-can-drag .fancybox-image-wrap{

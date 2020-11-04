@@ -50,36 +50,46 @@
                                     <a asp-area="" asp-controller="Home" asp-action="Index">Головна</a>
 
                                 </li>
-                                
-                                    @await Component.InvokeAsync("CategoryMenu")
-                             
+
+                                @await Component.InvokeAsync("CategoryMenu")
+
                                 <li class="dropdown">
                                 <li><a asp-controller="Contact" asp-action="Index">Звязок</a></li>
 
 
                             </ul>
 
+
                             <ul class="navigation menu-right clearfix">
+
+                                <partial name="_LoginPartial" />
                             </ul>
-                            <partial name="_LoginPartial" />
+
+
+
+                            <div class="outer-box clearfix">
+                                <!-- Shoppping Car -->  @*--- то шо ся находить у корзині*@
+                                <div class="cart-btn">
+                                    <a href="https://localhost:44351/ShoppingCart">
+                                        <img src="~/Images/icons/—Pngtree—cartoon cart_2718365.png" />
+
+                                    </a>
+                                </div>
+
+                                <div class="cart-btn">
+
+                                    @await Component.InvokeAsync("ShoppingCartSummary")
+
+                                </div>
+
+                            </div>
+
                         </div>
                     </nav>
                     <!-- Main Menu End-->
                 
 
-                <div class="outer-box clearfix">
-                    <!-- Shoppping Car -->  @*--- то шо ся находить у корзині*@
-                    <div class="cart-btn">
-
-                    </div>
-
-                    <div class="cart-btn">
-                        <a href="https://localhost:44358/ShoppingCart">
-                            @await Component.InvokeAsync("ShoppingCartSummary")
-                        </a>
-                    </div>
-
-                </div>
+            
 
                 <!-- Sticky Header  -->    @*коли листаш у низ та видко logo*@
                 <div class="sticky-header">
