@@ -1,9 +1,40 @@
 ﻿@model PiesListViewModel
+@*<head>
+     Stylesheets 
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro">
 
 
-<h1>@Model.CurrentCategory</h1>
+    <script src="~/lib/bootstrap/js/bootstrap.js"></script>
+    основа1
+    <link href="~/Content/site.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
 
-@foreach (var pie in Model.Pies)
-{
-    <partial name="_PieCard" model="pie" />
-}
+    основа2
+
+    <link href="~/plugins/revolution/css/navigation.css" rel="stylesheet" type="text/css">
+    <link href="~/css2/style.css" rel="stylesheet">
+    <link href="~/css2/responsive.css" rel="stylesheet">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+</head>*@
+
+<body>
+
+
+
+    <h1>@Model.CurrentCategory</h1>
+
+    @foreach (var pie in Model.Pies)
+    {
+        <partial name="_PieCard" model="pie" />
+    }
+
+
+</body>
+
+
+@*<script src="~/js/jquery.js"></script>
+<script src="~/js/popper.min.js"></script>
+<script src="~/js/bootstrap.min.js"></script>*@
