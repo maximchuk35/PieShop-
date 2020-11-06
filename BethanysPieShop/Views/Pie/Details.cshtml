@@ -6,8 +6,7 @@
         <div class="row clearfix">
 
             <!--Content Side-->
-            <div class="content-side col-lg-9 col-md-12 col-sm-12">
-                <div class="shop-single">
+  
                     <!-- Product Detail -->
                     <div class="product-details">
                         <!--Basic Details-->
@@ -40,7 +39,7 @@
                                     </div>
 
                                     <div class="other-options clearfix">
-                                        
+
                                         <p class="button">
                                             <a class="btn btn-primary" asp-controller="ShoppingCart" asp-action="AddToShoppingCart"
                                                asp-route-pieId="@Model.PieId">Додати в кошик</a>
@@ -67,13 +66,13 @@
 
                                     <!--Tab-->
                                     <div class="tab active-tab" id="prod-details">
-                                 
+
                                         @Model.LongDescription
                                     </div>
 
                                     <!--Tab-->
                                     <div class="tab " id="prod-reviews">
-                                      
+
                                         <!--Reviews Container-->
                                         <div class="comments-area">
                                             <!--Comment Box-->
@@ -82,8 +81,8 @@
                                                     <div class="author-thumb"><img src="https://via.placeholder.com/60x60" alt=""></div>
                                                     <div class="comment-inner">
                                                         <div class="comment-info clearfix">
-                                                            <strong class="name">Stuart</strong>
-                                                            <span class="date">– 07 Jun</span>
+                                                            <strong class="name">Алекс</strong>
+                                                            <span class="date">– 07 Серпня</span>
                                                         </div>
                                                         <div class="rating">
                                                             <span class="fa fa-star"></span>
@@ -92,7 +91,7 @@
                                                             <span class="fa fa-star"></span>
                                                             <span class="fa fa-star light"></span>
                                                         </div>
-                                                        <div class="text">This will go great with my Hoodie that I ordered a few weeks ago.</div>
+                                                        <div class="text">Як мені бракує її але я змушений дотримуватися дієти.</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -104,7 +103,7 @@
                                                     <div class="comment-inner">
                                                         <div class="comment-info clearfix">
                                                             <strong class="name">Maria</strong>
-                                                            <span class="date">– 07 Jun</span>
+                                                            <span class="date">– 23 Вересня</span>
                                                         </div>
                                                         <div class="rating">
                                                             <span class="fa fa-star"></span>
@@ -113,7 +112,7 @@
                                                             <span class="fa fa-star"></span>
                                                             <span class="fa fa-star light"></span>
                                                         </div>
-                                                        <div class="text">Love this shirt! The ninja near and dear to my heart.</div>
+                                                        <div class="text">Відмінно.</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -121,11 +120,11 @@
 
                                         <!--Comment Form-->
                                         <div class="comment-form">
-                                        
+
                                             <div class="form-outer">
-                       
+
                                                 <div class="rating-box">
-                                                    <div class="field-label">Your Rating</div>
+                                                    <div class="field-label">Поставте оцінку</div>
                                                     <div class="rating">
                                                         <a href="#"><span class="fa fa-star"></span></a>
                                                         <a href="#"><span class="fa fa-star"></span></a>
@@ -134,15 +133,15 @@
                                                         <a href="#"><span class="fa fa-star"></span></a>
                                                     </div>
                                                 </div>
-                                                <form method="post" action="blog-showcase.html">
+                                                <form method="post" action="https://localhost:44351/Order/Checkout">
                                                     <div class="row clearfix">
                                                         <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                                                            <div class="field-label">Your review *</div>
+                                                            <div class="field-label">Ваш відгук *</div>
                                                             <textarea name="message" placeholder=""></textarea>
                                                         </div>
 
                                                         <div class="col-lg-6 col-md-12 col-sm-12 form-group">
-                                                            <div class="field-label">Name *</div>
+                                                            <div class="field-label">Імя *</div>
                                                             <input type="text" name="username" placeholder="" required="">
                                                         </div>
 
@@ -152,7 +151,7 @@
                                                         </div>
 
                                                         <div class="col-lg-12 col-md-12 col-sm-12 form-group text-right">
-                                                            <input type="submit" name="submit" value="Submit">
+                                                            <input type="submit" name="submit" value="Підтвердити">
                                                         </div>
                                                     </div>
                                                 </form>
@@ -163,61 +162,67 @@
                             </div>
                         </div>
                         <!--End Product Info Tabs-->
-                        <!-- Services Section -->  @*Фірмові страви цього сезону*@
-                        <div class="sec-title text-center">
-                            <div class="divider"><img src="images/icons/divider_1.png" alt=""></div>
-                            <h2>Фірмові страви цього сезону</h2>
-                        </div>
-                        <!-- Services Carousel -->
-                        <div class="services-carousel owl-carousel owl-theme">
-                            <!-- Service Block -->
-                            <div class="service-block">
-                                <div class="inner-box">
-                                    <div class="image-box">
+                        <!-- Services Section -->  @*наші фірмові страви слайдер*@
+                       
+                            <div class="auto-container">
 
-                                        <img src="https://gillcleerenpluralsight.blob.core.windows.net/files/applepiesmall.jpg" alt="">
+                                <div class="sec-title text-center">
+                                    <div class="divider"><img src="images/icons/divider_1.png" alt=""></div>
+                                    <h2>Фірмові страви цього сезону</h2>
+                                </div>
+                                <!-- Services Carousel -->
+                                <div class="services-carousel owl-carousel owl-theme">
+                                    <!-- Service Block -->
+                                    <div class="service-block">
+                                        <div class="inner-box">
+                                            <div class="image-box">
+
+                                                <img src="https://gillcleerenpluralsight.blob.core.windows.net/files/pumpkinpie.jpg" alt="">
+                                            </div>
+                                            <h3>Гарбузовий десерт</h3>
+                                            <p>Наш улюблений Хелловін!</p>
+                                        </div>
                                     </div>
-                                    <h3>Apple Pie</h3>
-                                    <p>Our famous apple pies!</p>
+
+                                    <!-- Service Block -->
+                                    <div class="service-block">
+                                        <div class="inner-box">
+                                            <div class="image-box">
+                                                <img src="https://gillcleerenpluralsight.blob.core.windows.net/files/cranberrypie.jpg" alt="">
+                                            </div>
+                                            <h3>Журавлинний пиріг</h3>
+                                            <p>Улюблений на Різдво.</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Service Block -->
+                                    <div class="service-block">
+                                        <div class="inner-box">
+                                            <div class="image-box">
+                                                <img src="https://gillcleerenpluralsight.blob.core.windows.net/files/christmasapplepie.jpg" alt="">
+                                            </div>
+                                            <h3>Різдвяний десерт</h3>
+                                            <p>Щасливих свят !</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Service Block -->
+                                    <div class="service-block">
+                                        <div class="inner-box">
+                                            <div class="image-box">
+
+                                                <img src="https://gillcleerenpluralsight.blob.core.windows.net/files/cherrypie.jpg" alt="">
+                                            </div>
+                                            <h3>Вишневий пиріг</h3>
+                                            <p>Літня класика!</p>
+                                        </div>
+                                    </div>
+
+
+
                                 </div>
                             </div>
-
-                            <!-- Service Block -->
-                            <div class="service-block">
-                                <div class="inner-box">
-                                    <div class="image-box">
-                                        <img src="https://gillcleerenpluralsight.blob.core.windows.net/files/pumpkinpiesmall.jpg" alt="">
-                                    </div>
-                                    <h3>Pumpkin Pie</h3>
-                                    <p>Our Halloween favorite.</p>
-                                </div>
-                            </div>
-
-                            <!-- Service Block -->
-                            <div class="service-block">
-                                <div class="inner-box">
-                                    <div class="image-box">
-                                        <img src="https://gillcleerenpluralsight.blob.core.windows.net/files/rhubarbpiesmall.jpg" alt="">
-                                    </div>
-                                    <h3>Rhubarb Pie</h3>
-                                    <p>My God, so sweet!</p>
-                                </div>
-                            </div>
-
-                            <!-- Service Block -->
-                            <div class="service-block">
-                                <div class="inner-box">
-                                    <div class="image-box">
-                                        <div class="services_frame"><svg viewBox="0 0 500 500"><path d="M488.5,274.5L488.5,274.5l1.8-0.5l-2,0.5c-2.4-8.7-4.5-16.9-4.5-24.5c0-8,2.3-16.5,4.7-25.5 c3.5-13,7.1-26.5,3.7-39.5c-3.6-13.2-13.5-23.1-23.1-32.7c-6.5-6.5-12.6-12.6-16.6-19.4c-3.9-6.8-6.1-15.2-8.5-24.1 c-3.5-13.1-7.1-26.7-16.7-36.3c-9.5-9.5-22.9-13.1-35.9-16.6c-9-2.4-17.5-4.6-24.4-8.7c-6.5-3.8-12.5-9.8-18.9-16.2 c-9.7-9.8-19.6-19.8-33.2-23.4c-13.5-3.7-27.3,0.1-40.4,3.7c-8.7,2.4-16.9,4.6-24.5,4.6c-8,0-16.5-2.3-25.5-4.7 c-9.3-2.5-18.8-5-28.1-5c-3.8,0-7.6,0.4-11.3,1.4C172,11.1,162,21.1,152.4,30.7c-6.5,6.5-12.6,12.6-19.4,16.6 c-6.8,3.9-15.2,6.1-24.1,8.5c-13.1,3.5-26.7,7.1-36.3,16.7c-9.5,9.5-13.1,23-16.6,36c-2.4,9-4.6,17.5-8.7,24.4 c-3.8,6.5-9.8,12.5-16.2,18.9c-9.8,9.7-19.7,19.6-23.4,33.2c-3.7,13.5,0.1,27.3,3.7,40.5c2.4,8.7,4.6,16.9,4.6,24.5 c0,8-2.3,16.5-4.6,25.5c-3.5,13-7.1,26.6-3.7,39.5c3.6,13.2,13.5,23.1,23.1,32.7c6.5,6.5,12.6,12.6,16.6,19.4 c3.9,6.8,6.1,15.1,8.5,24c3.5,13.1,7.1,26.8,16.7,36.4c9.5,9.5,23,13.1,35.9,16.6c9,2.4,17.5,4.6,24.4,8.7 c6.5,3.8,12.5,9.8,18.9,16.2c9.7,9.8,19.6,19.8,33.2,23.5c3.8,1,7.6,1.5,11.8,1.5c9.6,0,19.3-2.7,28.5-5.1c8.8-2.4,17-4.6,24.5-4.6 c8,0,16.5,2.3,25.5,4.6c13,3.6,26.6,7.1,39.5,3.7c13.2-3.6,23.1-13.5,32.7-23.1c6.5-6.5,12.6-12.6,19.4-16.6 c6.7-3.9,15.1-6.1,24-8.5c13.1-3.5,26.8-7.1,36.4-16.8c9.5-9.5,13.1-23,16.6-36c2.4-9,4.6-17.5,8.7-24.4c3.8-6.5,9.8-12.5,16.2-18.9 c9.8-9.7,19.9-19.7,23.6-33.3C495.7,301.4,494.4,287.7,488.5,274.5z"></path></svg></div>
-                                        <!-- cake img -->
-                                        <figure class="image"><img src="https://via.placeholder.com/500x500" alt=""></figure>
-                                    </div>
-                                    <h3>Small Cakes</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
-                                </div>
-                            </div>
-
-                        </div>
+                       
 
 
 
@@ -225,8 +230,7 @@
                 </div><!-- End Shop Single -->
             </div>
         </div>
-    </div>
-</div>
+
 
 
 
