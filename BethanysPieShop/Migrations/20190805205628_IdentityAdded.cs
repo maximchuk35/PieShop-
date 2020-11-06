@@ -8,12 +8,7 @@ namespace BethanysPieShop.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.AlterColumn<string>(
-                table: "Orders",
-                maxLength: 10,
-                nullable: false,
-                oldClrType: typeof(string),
-                oldNullable: true);
+         
 
             migrationBuilder.AlterColumn<string>(
                 name: "State",
@@ -287,11 +282,6 @@ namespace BethanysPieShop.Migrations
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
 
-            migrationBuilder.AlterColumn<string>(
-                table: "Orders",
-                nullable: true,
-                oldClrType: typeof(string),
-                oldMaxLength: 10);
 
             migrationBuilder.AlterColumn<string>(
                 name: "State",
