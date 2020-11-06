@@ -9,7 +9,7 @@ namespace BethanysPieShop.Migrations
             migrationBuilder.InsertData(
                 table: "Categories",
                 columns: new[] { "CategoryId", "CategoryName", "Description" },
-                values: new object[] { 1, "Fruit pies", null });
+                values: new object[] { 1, "Фруктові пироги", null });
 
             migrationBuilder.InsertData(
                 table: "Categories",

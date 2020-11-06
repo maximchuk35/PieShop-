@@ -37,7 +37,7 @@ namespace BethanysPieShop.Migrations
                         new
                         {
                             CategoryId = 1,
-                            CategoryName = "Fruit pies"
+                            CategoryName = "Фруктові пироги"
                         },
                         new
                         {
