@@ -83,7 +83,7 @@ namespace BethanysPieShop.Models
             modelBuilder.Entity<Pie>().HasData(new Pie
             {
                 PieId = 4,
-                Name = "Cherry Pie",
+                Name = "Вишневий пиріг",
                 Price = 15.95M,
                 ShortDescription = "A summer classic!",
                 LongDescription =
@@ -91,7 +91,7 @@ namespace BethanysPieShop.Models
                 CategoryId = 1,
                 ImageUrl = "https://gillcleerenpluralsight.blob.core.windows.net/files/cherrypie.jpg",
                 InStock = true,
-                IsPieOfTheWeek = false,
+                IsPieOfTheWeek = true,
                 ImageThumbnailUrl = "https://gillcleerenpluralsight.blob.core.windows.net/files/cherrypiesmall.jpg",
                 AllergyInformation = ""
             });

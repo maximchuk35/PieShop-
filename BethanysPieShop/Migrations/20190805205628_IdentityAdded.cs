@@ -9,7 +9,6 @@ namespace BethanysPieShop.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.AlterColumn<string>(
-                name: "ZipCode",
                 table: "Orders",
                 maxLength: 10,
                 nullable: false,
@@ -289,7 +288,6 @@ namespace BethanysPieShop.Migrations
                 name: "AspNetUsers");
 
             migrationBuilder.AlterColumn<string>(
-                name: "ZipCode",
                 table: "Orders",
                 nullable: true,
                 oldClrType: typeof(string),
