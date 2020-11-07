@@ -36,7 +36,7 @@
         <!-- Main box -->  @*-- картинка заголовок у самому верху*@
         <div class="main-box">
             <div class="menu-box">
-                <div class="logo"><a href="index.html"><img src="/images/logo.png" alt="sasha солодкі прянощі" title=""></a></div>
+                <div class="logo"><a href="https://localhost:44351/"><img src="/images/logo.png" alt="sasha солодкі прянощі" title=""></a></div>
 
                 <!--Nav Box-->
                 <div class="nav-outer clearfix">
@@ -57,33 +57,33 @@
 
                             </ul>
 
-
+                            
                             <ul class="navigation menu-right clearfix">
-
-                                <partial name="_LoginPartial" />
+                                
+                                    <partial name="_LoginPartial" />
+                                
                             </ul>
 
 
+                                <div class="outer-box clearfix">
+                                    <!-- Shoppping Car -->  @*--- то шо ся находить у корзині*@
+                                    <div class="cart-btn">
+                                        <a href="https://localhost:44351/ShoppingCart">
+                                            <img src="~/Images/icons/—Pngtree—cartoon cart_2718365.png" />
 
-                            <div class="outer-box clearfix">
-                                <!-- Shoppping Car -->  @*--- то шо ся находить у корзині*@
-                                <div class="cart-btn">
-                                    <a href="https://localhost:44351/ShoppingCart">
-                                        <img src="~/Images/icons/—Pngtree—cartoon cart_2718365.png" />
+                                        </a>
+                                    </div>
 
-                                    </a>
-                                </div>
+                                    <div class="cart-btn">
 
-                                <div class="cart-btn">
+                                        @await Component.InvokeAsync("ShoppingCartSummary")
 
-                                    @await Component.InvokeAsync("ShoppingCartSummary")
+                                    </div>
 
                                 </div>
 
                             </div>
-
-                        </div>
-                    </nav>
+</nav>
                     <!-- Main Menu End-->
                 
 

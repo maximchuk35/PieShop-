@@ -1935,9 +1935,12 @@ hr{
 	display: none;
 }
 
-.tabs-box .active-tab{
-	display: block;
-}
+	.tabs-box .active-tab {
+		font-size: 180%;
+		margin: 23px;
+		line-height: 37px;
+		display: block;
+	}
 
 /*** 
 
@@ -11130,16 +11133,18 @@ iframe#gmap_canvas {
 	margin-bottom: 50px;
 }
 
-.login-section h2{
-	position:relative;
-	font-size:48px;
-	color: #4b4342;
-	line-height:1.2em;
-	margin-bottom:24px;
-}
+	.login-section h2 {
+	
+		position: relative;
+		font-size: 48px;
+		color: #4b4342;
+		line-height: 1.2em;
+		margin-bottom: 24px;
+	}
 
-.login-form{
-	position:relative;
+.login-form {
+	
+	position: relative;
 }
 
 .login-form .form-group{
