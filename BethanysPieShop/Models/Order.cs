@@ -29,8 +29,6 @@ namespace BethanysPieShop.Models
         [Display(Name = "Address Line 1")]
         public string AddressLine1 { get; set; }
 
-        [Display(Name = "Address Line 2")]
-        public string AddressLine2 { get; set; }
 
 
         [Required(ErrorMessage = "Please enter your city")]
@@ -39,9 +37,7 @@ namespace BethanysPieShop.Models
         [StringLength(10)]
         public string State { get; set; }
 
-        [Required(ErrorMessage = "Please enter your country")]
-        [StringLength(50)]
-        public string Country { get; set; }
+       
 
         [Required(ErrorMessage = "Please enter your phone number")]
         [StringLength(25)]

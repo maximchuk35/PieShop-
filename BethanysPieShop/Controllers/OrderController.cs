@@ -50,7 +50,7 @@ namespace BethanysPieShop.Controllers
 
         public IActionResult CheckoutComplete()
         {
-            ViewBag.CheckoutCompleteMessage = "Thanks for your order. You'll soon enjoy our delicious pies!";
+            ViewBag.CheckoutCompleteMessage = "Дякую за ваше замовлення. Незабаром ми з вами зв'яжемося!";
             return View();
         }
     }
