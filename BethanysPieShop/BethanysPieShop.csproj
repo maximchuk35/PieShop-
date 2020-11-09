@@ -116,6 +116,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="MailKit" Version="2.9.0" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.0.0-preview9.19424.4" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.0.0-preview9.19424.4" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.0.2" />
